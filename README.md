@@ -1,4 +1,4 @@
-# 👋 Hi, I'm Ohom Karnath Dubey
+# 👋 Hi, I'm Omkarnath Dubey
 
 I'm a **Software Developer** and **Java Developer** with a passion for creating innovative web and mobile applications. Currently, I'm exploring various aspects of digital marketing, SEO, and payment gateways.
 
