@@ -271,9 +271,9 @@ Deployment & Production Optimization
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=Ohom1&show_icons=true&theme=tokyonight&count_private=true&cache_seconds=1800" alt="GitHub Stats" height="180px"/>
+<img src="./profile/stats.svg&cache_seconds=1800" alt="GitHub Stats" height="180px"/>
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ohom1&layout=compact&theme=tokyonight&hide=html,css&cache_seconds=1800" alt="Top Languages" height="180px"/>
+<img src="./profile/top-langs.svg&cache_seconds=1800" alt="Top Languages" height="180px"/>
 
 <br/><br/>
 
