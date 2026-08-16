@@ -1,15 +1,16 @@
 name: Update Profile Stats
 
 on:
-  # Refresh profile stats automatically, even when commits happen in other repositories.
+  # Refresh automatically. GitHub contribution data itself can have some delay,
+  # but this removes the README card cache from the critical path.
   schedule:
     - cron: "*/15 * * * *"
 
-  # Refresh immediately when the profile README/workflow itself changes.
   push:
     paths:
       - "README.md"
       - ".github/workflows/update-profile-stats.yml"
+      - "scripts/generate-streak.js"
 
   workflow_dispatch:
 
@@ -25,27 +26,29 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Generate GitHub stats card
-        uses: readme-tools/github-readme-stats-action@v1
+        uses: stats-organization/github-readme-stats-action@v1
         with:
           card: stats
           options: "username=${{ github.repository_owner }}&show_icons=true&theme=tokyonight&count_private=true"
           path: profile/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: "true"
 
       - name: Generate top languages card
-        uses: readme-tools/github-readme-stats-action@v1
+        uses: stats-organization/github-readme-stats-action@v1
         with:
           card: top-langs
           options: "username=${{ github.repository_owner }}&layout=compact&theme=tokyonight&hide=html,css"
           path: profile/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: "true"
 
-      - name: Generate GitHub streak card
-        uses: DenverCoder1/github-readme-streak-stats@main
-        with:
-          options: "user=${{ github.repository_owner }}&theme=tokyonight&disable_animations=true"
-          path: profile/streak.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Generate streak card from GitHub contribution calendar
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: ${{ github.repository_owner }}
+          OUTPUT: profile/streak.svg
+        run: node scripts/generate-streak.js
 
       - name: Commit updated cards
         run: |
