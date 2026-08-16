@@ -50,11 +50,35 @@ jobs:
           OUTPUT: profile/streak.svg
         run: node scripts/generate-streak.js
 
-      - name: Commit updated cards
+      - name: Use generated cards in README
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path("README.md")
+          text = path.read_text(encoding="utf-8")
+
+          text = text.replace(
+              "https://github-readme-stats.vercel.app/api?username=Ohom1&show_icons=true&theme=tokyonight&count_private=true",
+              "./profile/stats.svg"
+          )
+          text = text.replace(
+              "https://github-readme-stats.vercel.app/api/top-langs/?username=Ohom1&layout=compact&theme=tokyonight&hide=html,css",
+              "./profile/top-langs.svg"
+          )
+          text = text.replace(
+              "https://github-readme-streak-stats.herokuapp.com/?user=Ohom1&theme=tokyonight",
+              "./profile/streak.svg"
+          )
+
+          path.write_text(text, encoding="utf-8")
+          PY
+
+      - name: Commit updated cards and README
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add profile/*.svg
+          git add README.md profile/*.svg
           git diff --cached --quiet && exit 0
           git commit -m "chore: update GitHub profile stats"
           git push
