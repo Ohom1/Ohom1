@@ -255,15 +255,15 @@ Deployment & Production Optimization
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=Ohom1&show_icons=true&theme=tokyonight&count_private=true" alt="GitHub Stats" height="180px" />
+<img src="./profile/stats.svg" alt="GitHub Stats" height="180px" />
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ohom1&layout=compact&theme=tokyonight&hide=html,css" alt="Top Languages" height="180px" />
+<img src="./profile/top-langs.svg" alt="Top Languages" height="180px" />
 
 </div>
 
 <div align="center">
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=Ohom1&theme=tokyonight" alt="GitHub Streak" />
+<img src="./profile/streak.svg" alt="GitHub Streak" />
 
 </div>
 
