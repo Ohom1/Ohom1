@@ -19,9 +19,9 @@
 
 ---
 
-## 🚀 About Me
+## 👨‍💻 About Me
 
-Full Stack Developer experienced in building **production-ready web applications, SaaS platforms, CRM systems, business automation tools and Android applications**.
+Full Stack Developer focused on building **production-ready web applications, SaaS platforms, CRM systems, business automation tools, and Android applications**.
 
 **Core Focus:** React.js • Next.js • Node.js • TypeScript • PostgreSQL • Prisma • MongoDB • Java • AI Integration
 
@@ -50,7 +50,7 @@ Full Stack Developer experienced in building **production-ready web applications
 
 # 🚀 Featured Projects
 
-### 🏢 Adhya Enterprises
+## 🏢 Adhya Enterprises
 
 **Business Management & Digital Operating Platform**
 
@@ -60,13 +60,13 @@ Full Stack Developer experienced in building **production-ready web applications
 * Authentication, RBAC & secure sessions.
 * Customer Portal, quotations, projects, billing & payments.
 * PostgreSQL + Prisma backend architecture.
-* Secure payment/webhook workflows.
+* Secure payment and webhook workflows.
 
 **Stack:** Next.js • TypeScript • PostgreSQL • Prisma • Tailwind CSS
 
 ---
 
-### 🏗️ FixCon
+## 🏗️ FixCon
 
 **Industrial Engineering & Product Platform**
 
@@ -75,14 +75,14 @@ Full Stack Developer experienced in building **production-ready web applications
 * Enterprise B2B industrial platform.
 * Product catalog & technical specifications.
 * Projects, case studies, industries & certifications.
-* TDS/MSDS and technical resource sections.
+* TDS/MSDS and technical resources.
 * Responsive component-based UI.
 
 **Stack:** Next.js • React • JavaScript • Tailwind CSS
 
 ---
 
-### 🏙️ Panchayat — AI Smart Society
+## 🏙️ Panchayat — AI Smart Society
 
 * AI voice complaint transcription & classification.
 * RAG-based society support assistant.
@@ -93,7 +93,7 @@ Full Stack Developer experienced in building **production-ready web applications
 
 ---
 
-### 🛡️ Spark Women — Emergency Response
+## 🛡️ Spark Women — Emergency Response
 
 * Shake-to-alert emergency trigger.
 * GPS location & reverse geocoding.
@@ -104,7 +104,7 @@ Full Stack Developer experienced in building **production-ready web applications
 
 ---
 
-### 🏠 Real Estate CRM
+## 🏠 Real Estate CRM
 
 * Property listing & lead management.
 * Sales dashboard & analytics.
@@ -135,34 +135,49 @@ Full Stack Developer experienced in building **production-ready web applications
 
 ---
 
-# 🎓 Education & Certifications
+# 🎓 Education
 
-**B.Sc. Information Technology — University of Mumbai (2023)**
+**B.Sc. Information Technology — University of Mumbai**
+*2023*
 
-**Certifications:**
+### Certifications
+
 AI Fundamentals • Java Programming • Frontend Development • Python • AWS
 
 ---
 
 # 🏆 Achievements
 
-* 🥇 Meena Ratna Student Award — State Government Recognition
-* 🔬 District-Level Science Exhibition Award
-* 🌍 International Multidisciplinary Conference Contribution
+* 🥇 **Meena Ratna Student Award** — State Government Recognition
+* 🔬 **District-Level Science Exhibition Award**
+* 🌍 **International Multidisciplinary Conference Contribution**
 
 ---
 
-# 📊 GitHub Stats
+# 📊 GitHub Statistics
 
 <div align="center">
 
-<img src="./profile/stats.svg&cache_seconds=1800" height="170"/>
+<img src="https://github-readme-stats-fast.vercel.app/api?username=Ohom1&show_icons=true&theme=tokyonight" height="170"/>
 
-<img src="./profile/top-langs.svg&cache_seconds=1800" height="170"/>
+<img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=Ohom1&layout=compact&theme=tokyonight&hide=html,css" height="170"/>
 
-<br/>
+<br/><br/>
 
-<img src="https://streak-stats.demolab.com?user=Ohom1&theme=tokyonight&hide_border=false" height="180"/>
+<img src="https://streak-stats.demolab.com/?user=Ohom1&theme=tokyonight&hide_border=false" height="180"/>
+
+</div>
+
+---
+
+# 🌐 Connect With Me
+
+<div align="center">
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge\&logo=linkedin\&logoColor=white)](https://www.linkedin.com/in/ohom-dubey-23055917b/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge\&logo=github\&logoColor=white)](https://github.com/Ohom1)
+[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge\&logo=netlify\&logoColor=white)](https://om-dubey-portfolio.netlify.app/)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge\&logo=gmail\&logoColor=white)](mailto:omkarnathdubey127@gmail.com)
 
 </div>
 
@@ -170,10 +185,12 @@ AI Fundamentals • Java Programming • Frontend Development • Python • AWS
 
 <div align="center">
 
+<img src="https://capsule-render.vercel.app/api?type=waving&color=36BCF7&height=80&section=footer"/>
+
 ### 💡 Building the future of software, one commit at a time.
 
 **Full Stack • AI Automation • SaaS • Enterprise Systems**
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=36BCF7&height=80&section=footer"/>
+<sub>© 2026 Omkarnath Dubey. Built with ❤️ and Code.</sub>
 
 </div>
