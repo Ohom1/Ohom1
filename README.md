@@ -8,7 +8,7 @@
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge\&logo=linkedin\&logoColor=white)](https://www.linkedin.com/in/ohom-dubey-23055917b/)
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge\&logo=instagram\&logoColor=white)](https://www.instagram.com/er_shub_h/)
-[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge\&logo=netlify\&logoColor=white)](https://erom-portfolio.netlify.app/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge\&logo=netlify\&logoColor=white)](https://om-dubey-portfolio.netlify.app/)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge\&logo=github\&logoColor=white)](https://github.com/Ohom1)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge\&logo=gmail\&logoColor=white)](mailto:omkarnathdubey127@gmail.com)
 
@@ -105,7 +105,7 @@ My primary development focus includes **React.js, Next.js, Node.js, TypeScript, 
 
 **Production-ready business platform designed to digitize and manage enterprise operations.**
 
-🔗 **[Live Project](https://adhya-enterprises.vercel.app/)**
+🔗 **[Live Project](https://www.adhyaenterprises.online/)**
 
 ### Key Engineering Highlights
 
@@ -226,46 +226,6 @@ My primary development focus includes **React.js, Next.js, Node.js, TypeScript, 
 
 ---
 
-# 🧠 Engineering Focus
-
-```text
-Full Stack Development
-        ↓
-Frontend Architecture
-        ↓
-Backend & REST APIs
-        ↓
-Database Design
-        ↓
-Authentication & Authorization
-        ↓
-Business Logic & Automation
-        ↓
-AI Integration
-        ↓
-Payment & Third-Party Integrations
-        ↓
-Testing & Security
-        ↓
-Deployment & Production Optimization
-```
-
-### Areas of Interest
-
-* AI-Powered SaaS
-* Business Automation
-* CRM & ERP Systems
-* Customer Portals
-* Payment Integrations
-* Multi-Tenant Applications
-* AI Agents & Automation
-* Enterprise Web Applications
-* Android Applications
-* API & Backend Architecture
-* Database Design
-* Secure Authentication Systems
-
----
 
 # 📊 GitHub Statistics
 
