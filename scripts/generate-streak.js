@@ -82,16 +82,10 @@ function createSvg(current, longest, total) {
 }
 
 async function main() {
-  const toDate = new Date();
-  const fromDate = new Date(toDate);
-  fromDate.setFullYear(toDate.getFullYear() - 1);
-  const from = fromDate.toISOString();
-  const to = toDate.toISOString();
-
   const query = `
-    query($login: String!, $from: DateTime!, $to: DateTime!) {
+    query($login: String!) {
       user(login: $login) {
-        contributionsCollection(from: $from, to: $to) {
+        contributionsCollection {
           contributionCalendar {
             totalContributions
             weeks {
@@ -106,8 +100,8 @@ async function main() {
     }
   `;
 
-  console.log(`Fetching contribution data for @${USERNAME} (${from} -> ${to})...`);
-  const data = await graphql(query, { login: USERNAME, from, to });
+  console.log(`Fetching contribution data for @${USERNAME}...`);
+  const data = await graphql(query, { login: USERNAME });
   const calendar = data.user.contributionsCollection.contributionCalendar;
   const days = calendar.weeks.flatMap(week => week.contributionDays)
     .sort((a, b) => a.date.localeCompare(b.date));
@@ -147,7 +141,9 @@ async function main() {
 
   fs.mkdirSync(require('path').dirname(OUTPUT), { recursive: true });
   fs.writeFileSync(OUTPUT, createSvg(current, longest, calendar.totalContributions));
-  console.log(`Contribution period: FROM=${from}, TO=${to}`);
+  const fromDate = days.length > 0 ? days[0].date : 'N/A';
+  const toDate = days.length > 0 ? days[days.length - 1].date : 'N/A';
+  console.log(`Contribution period: FROM=${fromDate}, TO=${toDate}`);
   console.log(`GraphQL contributionCalendar.totalContributions: ${calendar.totalContributions}`);
   console.log(`Number of contribution days: ${days.length}`);
   console.log(`Current streak: ${current} days`);
