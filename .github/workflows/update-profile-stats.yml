@@ -50,28 +50,43 @@ jobs:
           OUTPUT: profile/streak.svg
         run: node scripts/generate-streak.js
 
-      - name: Use generated cards in README
+      - name: Ensure local card paths in README
         run: |
-          python - <<'PY'
+          python3 - <<'PY'
+          import re
           from pathlib import Path
 
           path = Path("README.md")
-          text = path.read_text(encoding="utf-8")
+          if path.exists():
+              text = path.read_text(encoding="utf-8")
 
-          text = text.replace(
-              "https://github-readme-stats.vercel.app/api?username=Ohom1&show_icons=true&theme=tokyonight&count_private=true",
-              "./profile/stats.svg"
-          )
-          text = text.replace(
-              "https://github-readme-stats.vercel.app/api/top-langs/?username=Ohom1&layout=compact&theme=tokyonight&hide=html,css",
-              "./profile/top-langs.svg"
-          )
-          text = text.replace(
-              "https://github-readme-streak-stats.herokuapp.com/?user=Ohom1&theme=tokyonight",
-              "./profile/streak.svg"
-          )
+              # Replace external streak cards with local SVG
+              text = re.sub(
+                  r"https?://(?:streak-stats\.demolab\.com|github-readme-streak-stats\.herokuapp\.com)[^\s\"')]*",
+                  "./profile/streak.svg",
+                  text,
+              )
 
-          path.write_text(text, encoding="utf-8")
+              # Replace external stats cards with local SVGs
+              text = re.sub(
+                  r"https?://github-readme-stats\.vercel\.app/api/top-langs[^\s\"')]*",
+                  "./profile/top-langs.svg",
+                  text,
+              )
+              text = re.sub(
+                  r"https?://github-readme-stats\.vercel\.app/api(?![/-]top-langs)[^\s\"')]*",
+                  "./profile/stats.svg",
+                  text,
+              )
+
+              # Clean any accidental query parameters on local profile SVG paths
+              text = re.sub(
+                  r"\./profile/(stats|streak|top-langs)\.svg[?&][^\s\"'>)]*",
+                  r"./profile/\1.svg",
+                  text,
+              )
+
+              path.write_text(text, encoding="utf-8")
           PY
 
       - name: Commit updated cards and README
