@@ -1,16 +1,14 @@
 name: Update Profile Stats
 
 on:
-  # Refresh automatically. GitHub contribution data itself can have some delay,
-  # but this removes the README card cache from the critical path.
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - "profile/streak.svg"
+
   schedule:
     - cron: "*/15 * * * *"
-
-  push:
-    paths:
-      - "README.md"
-      - ".github/workflows/update-profile-stats.yml"
-      - "scripts/generate-streak.js"
 
   workflow_dispatch:
 
@@ -19,6 +17,7 @@ permissions:
 
 jobs:
   update-stats:
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
 
     steps:
