@@ -74,7 +74,7 @@ function createSvg(current, longest, total) {
   <text x="183" y="104" fill="#8b949e" font-family="Segoe UI,Arial,sans-serif" font-size="12">Longest streak</text>
   <text x="183" y="132" fill="#36BCF7" font-family="Segoe UI,Arial,sans-serif" font-size="25" font-weight="700">${formatNumber(longest)} days</text>
 
-  <text x="342" y="104" fill="#8b949e" font-family="Segoe UI,Arial,sans-serif" font-size="12">Contributions</text>
+  <text x="342" y="104" fill="#8b949e" font-family="Segoe UI,Arial,sans-serif" font-size="12">Total Contributions</text>
   <text x="342" y="132" fill="#36BCF7" font-family="Segoe UI,Arial,sans-serif" font-size="25" font-weight="700">${formatNumber(total)}</text>
 
   <text x="24" y="166" fill="#8b949e" font-family="Segoe UI,Arial,sans-serif" font-size="11">Based on GitHub contribution calendar • public contribution data</text>
@@ -82,10 +82,16 @@ function createSvg(current, longest, total) {
 }
 
 async function main() {
+  const toDate = new Date();
+  const fromDate = new Date(toDate);
+  fromDate.setFullYear(toDate.getFullYear() - 1);
+  const from = fromDate.toISOString();
+  const to = toDate.toISOString();
+
   const query = `
-    query($login: String!) {
+    query($login: String!, $from: DateTime!, $to: DateTime!) {
       user(login: $login) {
-        contributionsCollection {
+        contributionsCollection(from: $from, to: $to) {
           contributionCalendar {
             totalContributions
             weeks {
@@ -100,7 +106,8 @@ async function main() {
     }
   `;
 
-  const data = await graphql(query, { login: USERNAME });
+  console.log(`Fetching contribution data for @${USERNAME} (${from} -> ${to})...`);
+  const data = await graphql(query, { login: USERNAME, from, to });
   const calendar = data.user.contributionsCollection.contributionCalendar;
   const days = calendar.weeks.flatMap(week => week.contributionDays)
     .sort((a, b) => a.date.localeCompare(b.date));
@@ -140,7 +147,12 @@ async function main() {
 
   fs.mkdirSync(require('path').dirname(OUTPUT), { recursive: true });
   fs.writeFileSync(OUTPUT, createSvg(current, longest, calendar.totalContributions));
-  console.log(`Generated ${OUTPUT}: current=${current}, longest=${longest}, total=${calendar.totalContributions}`);
+  console.log(`Contribution period: FROM=${from}, TO=${to}`);
+  console.log(`GraphQL contributionCalendar.totalContributions: ${calendar.totalContributions}`);
+  console.log(`Number of contribution days: ${days.length}`);
+  console.log(`Current streak: ${current} days`);
+  console.log(`Longest streak: ${longest} days`);
+  console.log(`Generated ${OUTPUT}`);
 }
 
 main().catch(error => {
