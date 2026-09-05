@@ -77,8 +77,10 @@
 
 ---
 
-### 🏙️ Panchayat Mobile App — AI-Powered Smart Society Platform
+### 🏙️ [Panchayat Mobile App](https://panchayat-app.panchayat.workers.dev/) — AI-Powered Smart Society Platform
 > Community management and automation platform designed to digitize day-to-day residential society administration and resident services.
+
+🔗 **[Live Website](https://panchayat-app.panchayat.workers.dev/)**
 
 - **AI Voice Complaints:** Integrated Google Gemini SDK for automated voice recording, speech-to-text transcription, and intelligent category classification.
 - **RAG Support Assistant:** Built an AI-powered society assistant grounded in society-specific bylaws, operational rules, and FAQs.
@@ -107,15 +109,10 @@
 
 ---
 
-## 📊 GitHub Analytics
+## 📊 GitHub Activity
 
 <p align="center">
-  <img src="./profile/stats.svg" alt="Omkarnath's GitHub Stats" width="49%" />
-  <img src="./profile/streak.svg" alt="Omkarnath's GitHub Streak" width="49%" />
-</p>
-
-<p align="center">
-  <img src="./profile/top-langs.svg" alt="Top Languages" />
+  <img src="./profile/streak.svg" alt="GitHub Contribution Streak and Total Contributions" />
 </p>
 
 ---
