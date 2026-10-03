@@ -57,7 +57,7 @@
 
 ## 🚀 Featured Projects
 
-### 🏢 [Adhya Enterprises](https://www.adhyaenterprises.online/) — Business Management & Digital Operating Platform
+### 🏢 [Adhya Enterprises](https://www.adhyaenterprises.com/) — Business Management & Digital Operating Platform
 > Production-ready enterprise web platform designed to digitize business operations, quotations, customer lifecycles, and billing workflows.
 
 - **Architecture & Security:** Multi-role architecture featuring role-based access control (RBAC), Argon2id cryptographic password hashing, and server-side protected route middleware.
